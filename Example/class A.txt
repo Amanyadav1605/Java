@@ -1,0 +1,21 @@
+class A
+{
+// A member inner class named B.
+class B2
+{
+public void m1()
+{
+System.out.println(" Inner class method");
+}
+}
+public static void main(String args[])
+{
+//Static area of the outer class.
+System.out.println("Outer class main method");
+// Create an instance of class.
+A a = new A()
+//Create an instance of class B and call method m1() from the static area of outer class using reference variable i.
+A.B2 b = a.new B2();
+b.m1();
+}
+}
